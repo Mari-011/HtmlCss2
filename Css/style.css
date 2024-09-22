@@ -1,0 +1,195 @@
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+        body {
+        font-family: 'PT Sans', sans-serif;
+        translate: 0 -10px;
+        }
+
+        .container{
+
+        width: 90%;
+        margin: 0 auto;
+        }
+        :root{
+        --mainColor:#6a6969;
+
+        text-transform: capitalize;
+        }
+        a{
+        text-decoration: none;
+        }
+        /* Header */
+
+        .header-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        }
+        .header-content ul li{
+        list-style: none;
+        display: inline-block;
+
+
+        }
+
+
+
+        .navbar ul li .link-item{
+        color: var(--mainColor);
+        font-size: 16px;
+        font-weight: bolder;
+        text-decoration: none;
+        display: block;
+        color: #444343;
+        text-align: center;
+        margin: 0 20px;
+        position: relative;
+        width: 100px;
+        height: 40px;
+        background-color: white;
+        padding: 8px 0;
+        }
+
+        .link-item:before , .link-item:after{
+        position: absolute;
+        content: "";
+        border: 20px solid #532b03;;
+        top: 0;
+        left:0;
+        color: #2b2929;
+        transition: transform 0.2s;
+        }
+        .link-item:before{
+
+        width: 100px;
+        height: 40px;
+        border-width: 0 2px;
+        transform: scale3d(1,0,1);
+
+        }
+        .link-item:hover:before{
+        transform: scale3d(1,1,1);
+        }
+
+        .link-item:after{
+        width: 102px;
+        height: 38px;
+        border-width: 2px 0;
+        transform: scale3d(0,1,1);
+        transform-origin: left;
+
+        }
+        .link-item:hover:after{
+        transform: scale3d(1,1,1);
+        transition-delay: 0.2s;
+        }
+
+        img{
+        flex: 1;
+        max-width: 120px;
+        }
+        .login ul li i{
+        font-size: 30px;
+        padding: 0 8px;
+        color: #444343
+        }
+        .login ul li span{
+        /* text-align: right; */
+        font-size: 18px;
+        font-weight: 600px;
+        margin-left: 20px;
+
+        }
+        nav{
+        flex: 6;
+        text-align: center;
+        display: block;
+
+
+
+
+
+        }
+        .login{
+        flex: 2;
+        /* text-align: right; */
+        }
+
+        .login ul li:last-child i{
+        position: relative;
+        }
+        .login ul li:last-child i:after{
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        content: "0";
+
+        color: white;
+        background-color: #a08c8c;
+        text-align: center;
+        font-size: 18px;
+        display: block;
+        translate: 24px -9px
+        }
+        /* Dropdown */
+        .dropdown{
+        position: relative;
+        }
+        .dropdown-menue{
+        margin-top: 40px;
+        position: absolute;
+        width: 400px;
+        opacity: 0;
+        transition: transform 0.5s, visibility 0.5s, opacity 0.5s;
+        transform: scale(0);
+        visibility: hidden;
+        border:2px solid #532b03;
+        background-color:white;
+        padding: 10px ;
+        }
+        .dropdown-menue ul {
+        display: table-cell;
+        text-align: left;
+        }
+        .dropdown-menue ul li:first-child a{
+        width: 50px;
+        padding: 5px;
+
+        color: #8f8989;
+        display: block;
+        text-align: left;
+
+        margin-bottom: 10px;
+        border-bottom: 1px dotted #6a6969;
+        }
+        .dropdown-menue ul li {
+        width: 100px;
+        line-height: 1.5;
+        font-size: 14px;
+        color: #444343;
+        }
+        .navbar .list-unlisted .dropdown:hover .dropdown-menue{
+         opacity: 1;
+        
+        visibility: visible;
+        transform: scale(1);
+        }
+        /* Slider */
+        .slider{
+        height: 700px;
+        width: 100%;
+
+        }
+        .slider .image{
+
+        background: url(../images/main-banner-1-1600x700.jpg) no-repeat;
+        background-size:cover ;
+        width: 100%;
+        height: 600px;
+
+        }
